@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ex02-expo",
-    "slug": "ex02-expo",
+    "name": "ex02-expo-UI-Kit",
+    "slug": "ex02-expo-UI-Kit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -48,14 +48,15 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "32fea3ba-b828-4335-b45d-8b3afa00f484"
+        "projectId": "d044f40c-bcce-4300-9f92-226cdda3a284"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/32fea3ba-b828-4335-b45d-8b3afa00f484"
-    }
+      "url": "https://u.expo.dev/d044f40c-bcce-4300-9f92-226cdda3a284"
+    },
+    "owner": "nunnowdc"
   }
 }
