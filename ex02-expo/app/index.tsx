@@ -1,16 +1,22 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import {
-  Alert,
-  Button,
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+
+import { 
+  Button, 
+  Input, 
+  Image, 
+  Text, 
+  ThemeProvider 
+} from "@rneui/themed";
+
+import { 
+  Alert, 
+  Pressable, 
+  ScrollView, 
+  StyleSheet, 
+  View 
 } from "react-native";
+
 // import { FlatListExample } from "@/components/FlatListExample";
 import { SectionListExample } from "@/components/SectionListExample";
 
@@ -21,7 +27,7 @@ export default function Index() {
   const anoNasc = new Date().getFullYear() - parseInt(idade);
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Olá Turma!</Text>
+      <Text h2 style={styles.title}>Olá Turma!</Text>
       <Image
         style={styles.avatar}
         source={require("@/assets/images/avatar.jpg")}
@@ -39,24 +45,24 @@ export default function Index() {
         </Text>
       </Pressable>
       {!isNaN(anoNasc) && <Text>Você nasceu em {anoNasc}</Text>}
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeIdade}
-        value={idade}
-        placeholder="Qual a sua idade?"
-        keyboardType="numeric"
+      <Input
+          containerStyle={styles.input} 
+          onChangeText={onChangeIdade}
+          value={idade}
+          placeholder="Qual a sua idade?"
+          keyboardType="numeric"
       />
       <View style={styles.buttonsContainer}>
         <Button
           onPress={() => Alert.alert("Botão OK pressionado")}
           title="     OK     "
-          color="#841584"
+          buttonStyle={{ backgroundColor: '#841584' }}
           accessibilityLabel="Learn more about this purple button"
         />
         <Button
           onPress={() => Alert.alert("Botão Cancel pressionado")}
           title="Cancel"
-          color="#841584"
+          buttonStyle={{ backgroundColor: '#841584' }}
           accessibilityLabel="Learn more about this purple button"
         />
       </View>
