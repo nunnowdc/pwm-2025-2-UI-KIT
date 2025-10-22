@@ -28,11 +28,13 @@ export default function Index() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text h2 style={styles.title}>Olá Turma!</Text>
+
       <Image
         style={styles.avatar}
         source={require("@/assets/images/avatar.jpg")}
         resizeMode="cover"
       />
+
       <Pressable
         onPress={() => {
           setShowDetails(!showDetails);
@@ -45,6 +47,7 @@ export default function Index() {
         </Text>
       </Pressable>
       {!isNaN(anoNasc) && <Text>Você nasceu em {anoNasc}</Text>}
+
       <Input
           containerStyle={styles.input} 
           onChangeText={onChangeIdade}
@@ -52,32 +55,36 @@ export default function Index() {
           placeholder="Qual a sua idade?"
           keyboardType="numeric"
       />
+
       <View style={styles.buttonsContainer}>
+
         <Button
           onPress={() => Alert.alert("Botão OK pressionado")}
           title="     OK     "
           buttonStyle={{ backgroundColor: '#841584' }}
           accessibilityLabel="Learn more about this purple button"
         />
+
         <Button
           onPress={() => Alert.alert("Botão Cancel pressionado")}
           title="Cancel"
           buttonStyle={{ backgroundColor: '#841584' }}
           accessibilityLabel="Learn more about this purple button"
         />
+
       </View>
+      
       <Button
         title="Ir para Lista de Tarefas"
         onPress={() => router.navigate("/taskList")}
       />
+
       <View style={styles.space} />
     </ScrollView>
   );
 }
 
-// Exemplos de Listas
 function App() {
-  // return <FlatListExample />;
   return <SectionListExample />;
 }
 
